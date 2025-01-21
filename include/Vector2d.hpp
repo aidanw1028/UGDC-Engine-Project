@@ -18,6 +18,8 @@ class Vector2d {
         : x{xIn}, y{yIn}
         {}
 
+        inline double DotProduct(const Vector2d& v1, const Vector2d& v2) const;
+
         // basic setters with inlines
         inline void SetX(double xIn) {this->x = xIn;}
         inline void SetY(double yIn) {this->y = yIn;}
@@ -53,7 +55,13 @@ class Vector2d {
             return result;
         }
 
+        inline double DotProduct(const Vector2d& v1, const Vector2d& v2) const {
+            return v1.x * v2.x + v1.y * v2.y;
+        }
+
         friend std::ostream& operator<< (std::ostream& os, const Vector2d& v);
+
+
 };
 inline
 std::ostream& operator<< (std::ostream& os, const Vector2d& v)
@@ -61,5 +69,7 @@ std::ostream& operator<< (std::ostream& os, const Vector2d& v)
     os << "(" << v.x << ", " << v.y << ")";
     return os;
 }
- //TODO: Implement cross and dot product basic multiplication and division
+//TODO: Implement cross and dot product basic multiplication and division
+
+
 
