@@ -40,6 +40,12 @@ class Vector2d {
             return result;
         }
 
+        // define equality between two vectors
+        // so they can be compared using ==
+        bool operator==(const Vector2d& vector) {
+            return x == vector.x && y == vector.y;
+        }
+
         // minus 1d
 
         Vector2d operator-() {

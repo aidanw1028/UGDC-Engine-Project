@@ -13,9 +13,12 @@ OBJ := $(SRC:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
 DEPS := $(OBJ:.o=.d)
 
 # Rules
-.PHONY: all clean directories debug fast clang
+.PHONY: all run clean directories debug fast clang
 
 all: directories $(TARGET)
+
+run: all
+	./bin/UGDC-Engine
 
 # Debug target
 debug: CXXFLAGS += -D DEBUG -g
