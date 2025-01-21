@@ -55,7 +55,7 @@ class Vector2d {
             return result;
         }
 
-        inline double DotProduct(const Vector2d& v1, const Vector2d& v2) const {
+        inline double DotProduct(const Vector2d& v1, const Vector2d& v2) {
             return v1.x * v2.x + v1.y * v2.y;
         }
 
