@@ -13,3 +13,4 @@ int main(int argc, char** argv) {
     double actual_dotProduct = v1.DotProduct(v1, v2);
     assert(expected_dotProduct == actual_dotProduct);
 }
+
